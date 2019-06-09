@@ -31,7 +31,7 @@ jdk() {
   fi
 }
 
-if [ -n ~/.jdkversion ]; then
+if [ -f ~/.jdkversion ]; then
   jdk `cat ~/.jdkversion` 2>&1 >/dev/null
 else
   export JAVA_HOME=$(java_home)
